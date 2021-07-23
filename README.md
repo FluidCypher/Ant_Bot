@@ -1,3 +1,3 @@
 # Ant_Bot
 Creating a Telegram Bot. Experimenting with it.
-Ready... 1,2,3.. Go...
+Ready Go..
