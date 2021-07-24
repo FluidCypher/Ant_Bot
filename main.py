@@ -20,7 +20,7 @@ def remeb(message):
   lst = message.text.split()
   db[lst[1]] = lst[2]
   bot.send_message(message.chat.id,"Gotcha!")
-  print(db[lst[1]]) #saves the data in database and 
+  print(db[lst[1]]) #saves the data in database and replies Gotcha! to the user
 
 
 bot.polling()
