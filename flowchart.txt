@@ -1,0 +1,16 @@
+START
+INPUT CHOICE: 1. Remember Something.("remember")
+              2. Remind me something. ("remind")
+
+1. "remember":
+    INPUT KEY and VALUE
+    SAVE VALUE AGAINST KEY IN Db.
+
+2. "remind":
+    a. Remind by KEY (remind <key>)
+    b. Remind all (/remind)
+
+        a. remind <key>:
+          INPUT KEY TO GET THE VALUE
+        b. /remind
+          PRINT ALL KEYS
