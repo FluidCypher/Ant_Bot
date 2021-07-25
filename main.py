@@ -1,6 +1,7 @@
 import os  #for api address
 import telebot  #for the main bot
 from replit import db  #for database
+import time
 
 key_api = os.environ['key_api']  #pulls the key from secrets
 
@@ -9,8 +10,7 @@ bot = telebot.TeleBot(key_api)  #creats a bot linked with the api
 
 @bot.message_handler(commands=["greet"])
 def greet(message):
-    bot.reply_to(message,
-                 "Hello there!")  #replies Hello there! when inputted /greet
+    bot.reply_to(message,"Hello there!")  #replies Hello there! when inputted /greet
 
 
 def remember(message):
@@ -46,4 +46,9 @@ def remindall(message):
 	for i in keys:
 		bot.send_message(message.chat.id,i)   #returns all the keys remembered by the database
 
-bot.polling()
+while True: #Keeps the bot from becoming inactive time to time
+  try:
+    bot.polling()
+  except Exception:
+    time.sleep(5)
+
